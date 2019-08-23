@@ -369,7 +369,7 @@ int pam_sm_authenticate(pam_handle_t *pamh, int flags, int argc,
 
   if (cfg->manual == 0) {
     if (cfg->interactive) {
-      converse(pamh, PAM_PROMPT_ECHO_ON,
+      converse(pamh, PAM_TEXT_INFO,
                cfg->prompt != NULL ? cfg->prompt : DEFAULT_PROMPT);
     }
 
